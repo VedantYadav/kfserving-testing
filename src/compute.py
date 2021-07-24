@@ -29,11 +29,11 @@ class KF_test(kfserving.KFModel):
         inputs = request["instances"]
         source_text = inputs[0]["text"]
         
-#         logging.debug("source text -> " + soruce_text)
+#         logging.debug("source text -> " + source_text)
 
-        print("source text -> " + soruce_text)
+        print("source text -> " + source_text)
         if isinstance(source_text, str):
-            return {"predictions": self.model(soruce_text)}
+            return {"predictions": self.model(source_text)}
         else:
             return {"predictions": "Wrong data format"}
         
